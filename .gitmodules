@@ -1,0 +1,9 @@
+[submodule "cldr-core"]
+	path = cldr-core
+	url = https://github.com/unicode-cldr/cldr-core.git
+[submodule "cldr-misc-full"]
+	path = cldr-misc-full
+	url = https://github.com/unicode-cldr/cldr-misc-full.git
+[submodule "cldr-numbers-full"]
+	path = cldr-numbers-full
+	url = https://github.com/unicode-cldr/cldr-numbers-full

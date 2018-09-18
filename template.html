@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>o3a — Multilocale Oracle</title>
+        <link rel="stylesheet" href="static/styles.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <img id="sun" src="static/sun.svg"/>
+                <span id="yes">{{yes}}</span>
+                <img id="logo" src="static/logo.svg"/>
+                <span id="no">{{no}}</span>
+                <img id="moon" src="static/moon.svg"/>
+            </div>
+            <svg id="letters" viewBox="0 0 100 {{letters|length * 14 + 10}}">
+                {% for line in letters %}
+                <defs>
+                    <path id="curve{{loop.index}}" d="M10 {{(loop.index) * 14 + 10}} a 80 80 0 0 1 80 0"/>
+                </defs>
+                <text>
+                    <textPath 
+                        lengthAdjust="spacing" 
+                        startOffset="50%" 
+                        text-anchor="middle"
+                        xlink:href="#curve{{loop.index}}"
+                    >
+                        {{line}}
+                    </textPath>
+                </text>
+                {% endfor %}
+            </svg>
+            <div id="numbers">
+                {{numbers}}
+            </div>
+            <div id="footer">
+                <img src="static/bottomleft.svg"/>
+                <img id="goodbye" src="static/goodbye.svg"/>
+                <img src="static/bottomright.svg"/>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>o3a — Multilocale Oracle</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <img id="sun" src="sun.svg"/>
+                <span id="yes">{yes}</span>
+                <img id="logo" src="logo.svg"/>
+                <span id="no">{no}</span>
+                <img id="moon" src="moon.svg"/>
+            </div>
+            <svg class="letters" viewBox="0 0 100 40">
+                <text>
+                    <textPath 
+                        lengthAdjust="spacing" 
+                        startOffset="50%" 
+                        text-anchor="middle"
+                        path="M5 22 a 80 80 0 0 1 90 0"
+                    >
+                        ABCDEFGHIJKLM
+                    </textPath>
+                </text>
+                <text>
+                    <textPath 
+                        lengthAdjust="spacing" 
+                        startOffset="50%" 
+                        text-anchor="middle"
+                        path="M5 34 a 80 80 0 0 1 90 0"
+                    >
+                        NOPQRSTUVWXYZ
+                    </textPath>
+                </text>
+                <text x="50%" y="90%" text-anchor="middle">
+                    1234567890
+                </text>
+            </svg>
+            <!-- <svg class="cv" viewBox="0 0 100 25">
+            </svg> -->
+            <div id="footer">
+                <img src="bottomleft.svg"/>
+                <img src="bottomright.svg"/>
+            </div>
+        </div>
+    </body>
+</html>

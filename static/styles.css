@@ -1,0 +1,75 @@
+#container {
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: serif;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#header img {
+    inline-size: 25vw;
+}
+
+#header span {
+    margin-block-start: 5vw;
+    font-size: 5vw;
+    font-weight: 1000;
+    text-transform: uppercase;
+}
+
+#sun {
+    justify-self: start;
+}
+
+#yes {
+    margin-inline-start: -2vw;
+    justify-self: start;
+}
+
+#logo {
+    margin-block-start: 2vw;
+    justify-self: center;
+}
+
+#no {
+    margin-inline-end: -2vw;
+    justify-self: end;
+}
+
+#moon {
+    justify-self: end;
+}
+
+#letters {
+    inline-size: 95vw;
+    font-size: 7pt;
+    margin-block-start: -14vw;
+    margin-block-end: -6vw;
+    text-transform: uppercase;
+}
+
+#numbers {
+    font-size: 8vw;
+    font-weight: bold;
+    margin-block-end: -10vw;
+}
+
+#footer {
+    inline-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;    
+}
+
+#footer img {
+    inline-size: 30vw;
+}
+
+#goodbye {
+    margin-block-end: 5vw;
+}
