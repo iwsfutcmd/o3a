@@ -33,9 +33,9 @@ def get_data(tag):
             characters.extend([chr(cp) for cp in range(start, end + 1)])
         else:
             characters.append(c)      
-    characters = [c.upper() for c in characters]
+    characters = [c.upper() for c in characters if not re.match(r"\p{M}+", c)]
     characters = list(OrderedDict.fromkeys(characters))
-    output["letters"] = ["".join(characters[i:i+13]) for i in range(0, len(characters), 13)]
+    output["letters"] = ["\u200b".join(characters[i:i+13]) for i in range(0, len(characters), 13)]
     p_dict = json.load(open(f"cldr-misc-full/main/{tag}/posix.json"))
     p_messages = p_dict["main"][tag]["posix"]["messages"]
     output["yes"], output["no"] = colon_re.split(p_messages["yesstr"])[0].strip(), colon_re.split(p_messages["nostr"])[0].strip()
